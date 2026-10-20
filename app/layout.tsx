@@ -20,7 +20,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("h-full antialiased", display.variable, body.variable)}
+      className={cn(
+        "h-full scroll-pt-24 scroll-smooth antialiased",
+        display.variable,
+        body.variable,
+      )}
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider
