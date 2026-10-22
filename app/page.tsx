@@ -3,6 +3,7 @@ import { PlusPricing } from "@/components/copper/plus-pricing";
 import { PrivacySummary } from "@/components/copper/privacy-summary";
 import { Products } from "@/components/copper/products";
 import { Showcase } from "@/components/copper/showcase";
+import { StoreMap } from "@/components/copper/store-map";
 import { SiteFooter } from "@/components/copper/site-footer";
 import { SiteHeader } from "@/components/copper/site-header";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Showcase />
         <PlusPricing />
         <PrivacySummary />
+        <StoreMap />
       </main>
       <SiteFooter />
     </>
