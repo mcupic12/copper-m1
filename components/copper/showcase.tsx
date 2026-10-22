@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MascotSays } from "@/components/copper/mascot-says";
 import { cn } from "@/lib/utils";
 import { getProducts } from "@/lib/copper/catalog";
 
@@ -59,6 +60,13 @@ export function Showcase() {
           <p className="text-muted-foreground max-w-xl text-lg">
             At home on the counter, or clipped on at your favorite coffee shop.
           </p>
+          <MascotSays
+            alt="Copper the robot mascot pointing out the photos"
+            className="mt-2"
+          >
+            Here&apos;s where I like to hang out: your kitchen counter and your
+            favorite coffee shop.
+          </MascotSays>
         </div>
         <div className="flex flex-col gap-12 md:gap-16">
           {photos.map((photo, index) => (

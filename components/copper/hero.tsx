@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MascotSays } from "@/components/copper/mascot-says";
 import { Button } from "@/components/ui/button";
 import { getProducts } from "@/lib/copper/catalog";
 
@@ -20,6 +21,10 @@ export function Hero() {
           <Button asChild size="lg" className="h-11 px-6 text-base">
             <a href="#products">See products</a>
           </Button>
+          <MascotSays alt="Copper the robot mascot waving hello">
+            Hi, I&apos;m Copper! Meet{" "}
+            {products.map((product) => product.name).join(" and ")}.
+          </MascotSays>
         </div>
         <div className="grid grid-cols-2 items-end gap-4">
           {products.map((product, index) => (

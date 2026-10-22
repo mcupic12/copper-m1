@@ -1,4 +1,5 @@
-import { CircleCheckIcon, ShieldCheckIcon } from "lucide-react";
+import { CircleCheckIcon } from "lucide-react";
+import { MascotSays } from "@/components/copper/mascot-says";
 import { Card, CardContent } from "@/components/ui/card";
 import { getPrivacySummary } from "@/lib/copper/catalog";
 
@@ -15,7 +16,6 @@ export function PrivacySummary() {
     >
       <div className="mx-auto grid max-w-5xl gap-10 px-4 md:grid-cols-5 md:items-start">
         <div className="flex flex-col gap-4 md:col-span-2">
-          <ShieldCheckIcon className="text-accent size-10" aria-hidden />
           <h2 className="text-secondary-foreground text-3xl font-bold tracking-tight md:text-4xl">
             Your privacy, in plain words
           </h2>
@@ -23,6 +23,9 @@ export function PrivacySummary() {
             How Copper handles your recordings under our {privacy.policy}{" "}
             privacy policy.
           </p>
+          <MascotSays alt="Copper the robot mascot holding a privacy checklist">
+            Here&apos;s exactly how I handle your recordings, in plain words.
+          </MascotSays>
         </div>
         <Card className="border-accent rounded-l-none border-l-4 md:col-span-3">
           <CardContent className="px-6">

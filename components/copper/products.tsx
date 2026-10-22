@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MascotSays } from "@/components/copper/mascot-says";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -24,6 +25,19 @@ export function Products() {
           <p className="text-muted-foreground max-w-xl text-lg">
             Two devices, one helpful assistant, made for life in the desert.
           </p>
+          <MascotSays
+            side="right"
+            alt="Copper the robot mascot presenting the products"
+            className="mt-2"
+          >
+            {products
+              .map(
+                (product) =>
+                  `${product.name} is ${formatUsd(product.priceUsd)}`,
+              )
+              .join(" and ")}
+            . Here&apos;s what each one does.
+          </MascotSays>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {products.map((product) => (
